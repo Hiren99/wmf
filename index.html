@@ -50,7 +50,31 @@
                         <li class="nav-item"><a class="nav-link" href="locations.html">Locations</a></li>
                         <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Work Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>                        
+                        <li class="nav-item dropdown">
+                            <div class="d-flex align-items-center">
+                                <!-- Main Link -->
+                                <a class="nav-link" href="resources.html">
+                                    Resources
+                                </a>
+                                <!-- Dropdown Toggle Button -->
+                                <button class="btn nav-link dropdown-toggle dropdown-toggle-split"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                </button>
+                            </div>
+                            <ul class="dropdown-menu cdtwocolmenu">
+                                <li><a class="dropdown-item" href="air-quality.html">Air Quality</a></li>
+                                <li><a class="dropdown-item" href="water-damage.html">Water Damage</a></li>
+                                <li><a class="dropdown-item" href="mold-removal.html">Mold Removal</a></li>
+                                <li><a class="dropdown-item" href="fire-damage.html">Fire Damage</a></li>
+                                <li><a class="dropdown-item" href="insurance.html">Insurance</a></li>
+                                <li><a class="dropdown-item" href="plumbing.html">Plumbing</a></li>
+                                <li><a class="dropdown-item" href="damage-prevention.html">Damage Prevention</a></li>
+                                <li><a class="dropdown-item" href="restoration-news.html">Restoration News</a></li>
+                                <li><a class="dropdown-item" href="equipment.html">Equipment</a></li>
+                                <li><a class="dropdown-item" href="health.html">Health</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item cd-callmenubtn">
                             <p class="cd-showTxt">24/7 Emergency Service</p>
                             <a href="tel:+18009050277" class="cd-headercallBtn butn butn__new" title="+1 800-905-0277"><img src="images/icon/white-call-icon.png" alt="call icon" class="img-fluid"/> 800-905-0277</a>
@@ -512,7 +536,7 @@
     <script src="js/slick.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
     <script src="js/main.js"></script>
     <script>
         $(document).ready(function () {
@@ -680,6 +704,13 @@
             duration: 0.6,
             ease: "back.out(1.7)",
             stagger: 0.08,
+        });
+    </script>
+    <script>
+        /* ----- AOS ----- */
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
         });
     </script>
 </body>
