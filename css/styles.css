@@ -254,6 +254,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
                         url('../images/fort-lauderdale-city.jpeg');
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
