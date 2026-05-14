@@ -390,7 +390,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-property .cd-aboutTitle {font-size: clamp(1.625rem, 2.5vw, 1.875rem);font-family: var(--blod-arial);color: var(--white);margin-bottom: 1rem;}
 
 /* --- videos --- */
-.cd-videos {padding-bottom: 4rem;box-shadow: 0 10px 30px rgb(1 168 217 / 30%);}
+.cd-videos {padding-bottom: 4rem;box-shadow: 0 10px 30px rgb(1 168 217 / 30%);position: relative;}
 .cd-videos .ht-video {min-height: 525px;}
 .cd-videos .video-item {position: relative;cursor: pointer;overflow: hidden;border-radius: 1rem;box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);line-height: normal;display: flex;}
 
