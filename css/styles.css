@@ -170,7 +170,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.cd-navheader .cd-logo {height: 66px;}
+.cd-navheader .cd-logo {height: 60px;}
 .cd-navheader .nav-link {font-size: 1.125em;color: var(--dark);font-weight: 400;padding-inline: 1rem !important;}
 .cd-navheader .nav-link:hover {color: var(--primary);}
 .cd-navheader li.nav-item.dropdown a.nav-link {padding-right: 0 !important;}
@@ -196,12 +196,15 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .slider-container .overlay-box h3 {font-size: clamp(1.5rem, 2vw, 3.125rem);color: var(--white);font-family: var(--black-arial);margin-bottom: 1.3rem;}
 
 /* --- cta box --- */
-.cdcta {padding: 4rem 0;}
+.cdcta {position: relative;margin-top: -3rem;margin-bottom: 3rem;}
 /* The Main White Box */
         .service-card {
             border-radius: 8px;
+            background: rgb(255 255 255 / 90%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow like the image */
-            padding: 2rem;
+            padding: 2rem 1.5rem;
             border-top: 5px solid #7ab800; /* Optional: Green top border based on the image hint */
             display: flex;
             align-items: center;
@@ -244,7 +247,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             background: linear-gradient(135deg, #1a8fd4, #2196F3, #47bee3);
             border: 2px solid #1565C0;
             border-radius: 100px;
-            padding: 10px 26px;
+            padding: 10px 16px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -327,7 +330,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
         /* Pulse animation for the button */
         .call-btn-wrapper {
             flex: 0 0 auto;
-            margin-inline: 10px;
+            /* margin-inline: 10px; */
             position: relative;
         }
 
@@ -412,6 +415,87 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-testmonial .testimonial-arrows {text-align: center;}
 .cd-testmonial .testimonial-arrows button {background-color: transparent;padding: 0;color: #878080;font-size: 2em;}
 
+.slick-track {
+ 
+    padding-block: 1rem;
+}
+.testimonial-card{
+    margin: 10px;
+    background: var(--white);
+    border-radius:18px;
+    padding: 1rem;
+    box-shadow:0 4px 20px rgba(0,0,0,0.08);
+}
+.review-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:20px;
+}
+.review-header .review-menu .dropdown-toggle {background-color: transparent;padding: 0;border: 0;}
+.review-header .review-menu .dropdown-toggle::after {display: none;}
+.review-user{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+.review-user img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+}
+.review-user h4{
+    margin:0;
+    font-size: clamp(1rem, 1.2vw, 1.5rem);
+    font-family: var(--blod-arial);
+    color:#222;
+}
+.review-user span{
+    font-size:18px;
+    color:#666;
+    text-decoration:underline;
+}
+.review-menu i{
+    font-size:22px;
+    color:#444;
+}
+.review-rating{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom: 6px;
+}
+.stars i {
+    color:#fbbc04;
+    font-size: 16px;
+}
+.review-rating span{
+    color:#666;
+    font-size: 1rem;
+}
+.review-text{
+    font-size: 1em;
+    color:#222;
+    margin:0;
+    display:-webkit-box;
+    -webkit-line-clamp:3;   /* Show only 3 lines */
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+}
+.review-text.expanded{
+    -webkit-line-clamp:unset;
+}
+.toggle-review{
+    color: #1a3a5c;
+    font-family: var(--blod-arial);
+    text-decoration:none;
+    cursor:pointer;
+    font-size: 14px;
+}
+.toggle-review:hover{
+    text-decoration:underline;
+}
 /* ==== restoration ==== */
 .cd-restoration .innerbox {background-image: url('../images/restoration.webp');background-repeat: no-repeat;background-size: cover;padding: 3rem;color: var(--white);position: relative;}
 .cd-restoration .innerbox .cd-content {width: min(100vw, 550px);}
@@ -419,7 +503,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-restoration .innerbox .cd-content p + p {margin-bottom: 0;}
 
 /* ==== logos ==== */
-.cd-logos {padding: 4rem 0;}
+.cd-logos {padding: 4rem 0;background-color: #eff9fe;}
 .cd-logos .cd-logolist {display: flex;flex-direction: row;gap: 5px;}
 
 /* --- cta --- */
@@ -434,11 +518,11 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 /* --- inner page top section --- */
 .hero-section {
     position: relative;
-    min-height: 300px;
-    background-image: linear-gradient(135deg, rgba(220, 230, 245, 0.85), rgba(200, 215, 235, 0.80)), 
+    min-height: 500px;
+    background-image: linear-gradient(135deg, rgba(220, 230, 245, 0.85), rgba(200, 215, 235, 0.70)), 
                         url('../images/fort-lauderdale-city.jpeg');
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -570,6 +654,85 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     }
 }
 
+/* --- CTA location box --- */
+.location-card {            
+            background: rgb(255 255 255 / 90%);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            padding: 2rem 1.5rem;
+            border-top: 6px solid #8cc63f; /* The green strip at the top */
+        }
+
+        /* Left Column Styles */
+        .label-location {
+            color: #f37021; /* Orange */
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .city-name {
+            color: var(--dark);
+            font-size: clamp(1.5rem, 2vw, 1.8rem);
+            font-family: var(--blod-arial);
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .company-name {
+            color: #555;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .company-name:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+
+        .update-link {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+        
+        .update-link a {
+            color: #555;
+            text-decoration: underline;
+        }
+
+        /* Center Column Styles */
+        .emergency-text {
+            color: #f37021;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stars {
+            color: #8cc63f; /* Green stars matching the image */
+            font-size: 1.1rem;
+        }
+
+        .rating-score {
+            color: #555;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
 /* ==== Resourc ==== */
 .hero-search { background: url('https://watermoldfire.net/images/fire-demage.jpg') center/cover no-repeat; padding: 3rem 0; position: relative; }
 .hero-search::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
@@ -626,6 +789,83 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cdarticlepage .articleDesc h3 {font-size: clamp(1.25rem, 2vw, 1.5rem)}
 .cdarticlepage .articleDesc :where(h2,h3,h4,h5,h6) {color: var(--primary);font-family: var(--blod-arial);}
 .cdarticlepage .articleDesc p {color: var(--dark);text-align: justify;}
+/* show more link set */
+.cdmorelink {display: inline-block;color: #1a3a5c;font-family: var(--blod-arial);font-size: 14px;}
+.cdmorelink:hover {text-decoration: underline;transition: all 0.5s ease;}
+.short-content {
+    max-height: 500px;   /* Initial visible height */
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+/* Optional fade effect */
+.short-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(transparent, white);
+}
+
+.short-content.expanded {
+    max-height: 10000px;
+}
+
+.short-content.expanded::after {
+    display: none;
+}
+/* # show more link set */
+
+/* full with banner */
+.cdfullwidthbanner {background-color: #eff9fe;}
+.ht-whychoose .left-logo .cdiicrclogo {width: 200px;display: block;margin: 1rem auto 2rem;}
+.ht-whychoose .inner-list p {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+        .image-wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 700px;
+            width: 100%;
+            overflow: hidden;
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 46%, 0% 0%);
+            z-index: 1;
+        }
+        /* The actual IMG tag styling */
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            min-width: 120%; 
+        }
+        .text-padding {
+            max-width: 635px;
+            padding: 1rem 3rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 991px) {
+            /* On Mobile/Tablet: Remove diagonal, stack vertically */
+            .image-wrapper {
+                clip-path: none; /* Remove the cut */
+                min-height: 300px;
+                margin-bottom: 30px;
+            }            
+            .image-wrapper img {
+                min-width: 100%; /* Reset width */
+            }
+            .text-padding {
+                padding: 20px 15px; /* Reset padding for mobile */
+            }
+        }
+/* full with banner # */
 
 /* ==== listing ==== */
 .listing li { list-style-position: outside;list-style-type: disc;margin-left: 24px;margin-bottom: 12px;}
@@ -761,7 +1001,7 @@ ol li {margin-bottom: 12px;}
 .info-card:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 .section-badge { display: inline-flex; align-items: center; gap: 8px; background: #f1f5f9; color: #475569; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
 .section-badge i { color: #10b981; }
-.main-title { color: #0f172a; font-size: 1.75rem; font-weight: 800; line-height: 1.3; margin-bottom: 15px; }
+.main-title {color: var(--dark);font-size: clamp(1.5rem, 2vw, 1.8rem);font-family: var(--blod-arial);margin-bottom: 5px;line-height: 1.2;}
 .body-text { color: #475569; font-size: 1rem; line-height: 1.7; }
 .body-text a { color: #0ea5e9; text-decoration: none; font-weight: 600; }
 .body-text a:hover { text-decoration: underline; }
@@ -1429,6 +1669,8 @@ padding: 24px 16px;
 }
 }
 
+/* ---- city map ---- */
+.cdcitymap {padding: 4rem 0;}
 
 
 /* --- footer area --- */
@@ -1565,6 +1807,22 @@ padding: 24px 16px;
     .trust-section { flex-direction: column; padding: 40px 30px; }
     .cert-badge-wrapper { flex: 0 0 auto; margin-bottom: 10px; }
     .features-wrapper { grid-template-columns: repeat(2, 1fr); width: 100%; }
+
+    .location-card {
+    text-align: center;
+    padding: 30px 20px;
+    }
+    .rating-container {
+    justify-content: center;
+    margin-bottom: 20px;
+    }
+    .call-btn {
+    width: 100%;
+    max-width: 300px;
+    }
+    .col-left, .col-center {
+    margin-bottom: 20px;
+    }
 }
 @media (938px <= width <= 1030px) {
 }
