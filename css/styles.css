@@ -196,16 +196,20 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .slider-container .overlay-box h3 {font-size: clamp(1.5rem, 2vw, 3.125rem);color: var(--white);font-family: var(--black-arial);margin-bottom: 1.3rem;}
 
 /* --- cta box --- */
-.cdcta {position: relative;margin-top: -3rem;margin-bottom: 3rem;}
-/* The Main White Box */
-        .service-card {
-            border-radius: 8px;
+.cdcta {position: relative;
+    /* margin-top: -3rem; */
+border-radius: 8px;
             background: rgb(255 255 255 / 90%);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Soft shadow like the image */
             padding: 2rem 1.5rem;
             border-top: 5px solid #7ab800; /* Optional: Green top border based on the image hint */
+        }
+/* The Main White Box */
+        .service-card {
+            max-width: 1250px;
+            margin: 0 auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -244,13 +248,14 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             margin-bottom: 0;
         }
         .call-btn {
-            background: linear-gradient(135deg, #1a8fd4, #2196F3, #47bee3);
-            border: 2px solid #1565C0;
+            background-color: #f36f21;
+            border: 2px solid #f36f23;
             border-radius: 100px;
             padding: 10px 16px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            
             justify-content: center;
             gap: 10px;
             transition: all 0.3s ease;
@@ -295,8 +300,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
         }
 
         .phone-icon {
-            color: #e6b109;
-            font-size: 1rem;
+            color: var(--white);
+            font-size: 1.5rem;
             animation: ring 2s ease-in-out infinite;
             position: relative;
             z-index: 1;
@@ -315,8 +320,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             font-family: var(--cgbold);
             line-height: normal;
             display: inline-block;
-            color: #e6b109;
-            font-size: 20px;
+            color: var(--white);
+            font-size: 2em;
             letter-spacing: 2px;
             text-shadow:
                 1px 1px 0 #E65100,
@@ -748,15 +753,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 
 /* --- CTA location box --- */
 .location-card {            
-            background: rgb(255 255 255 / 90%);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            position: relative;
-            overflow: hidden;
-            padding: 2rem 1.5rem;
-            border-top: 6px solid #8cc63f; /* The green strip at the top */
+            max-width: 1250px;
+            margin: 0 auto;
         }
 
         /* Left Column Styles */
@@ -830,9 +828,9 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .hero-search::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
 .hero-search .container { position: relative; z-index: 2; }
 .hero-search .hero-title { color: var(--white); font-size: clamp(1.5rem, 2vw, 2rem); margin-bottom: 25px; }
-.hero-search .search-bar { display: flex; max-width: 700px; margin: auto; gap: 10px; }
-.hero-search .search-bar input { flex: 1; height: 50px; border-radius: 6px; }
-.hero-search .search-bar .btn { padding: 0 20px; height: 50px; border-radius: 6px; }
+.herotwobox .search-bar { display: flex; max-width: 700px; margin: auto; gap: 10px; }
+.herotwobox .search-bar input { flex: 1; height: 50px; border-radius: 6px; }
+.herotwobox .search-bar .btn { padding: 0 20px; height: 50px; border-radius: 6px;;color: var(--dark);}
 
 .cd-resources {padding: 4rem 0;}
 .cd-resources .cdlistcat {margin: 1rem 0;border: 1px solid #ccc;padding: 1rem;border-radius: 1rem;text-align: center;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);}
@@ -1001,35 +999,56 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 /* # only three box use */
 
 /* --- strip menu --- */
-.cdresourceStrip {background-color: #1a3a5c;padding-block: 20px;}
-.cdresourceStrip .top-menu{
-        display:flex;
-        flex-wrap:wrap;
-        align-items:center;
-        gap:0;
-    }
-    .cdresourceStrip .top-menu a{
-        color:var(--white);
-        text-decoration:none;
-        font-size:15px;
-        padding:0 14px;
-        position:relative;
-        transition:0.3s ease;
-    }
-    .cdresourceStrip .top-menu a:hover{
-        opacity:0.8;
-    }
-    /* Divider Line */
-    .cdresourceStrip .top-menu a:not(:last-child)::after{
-        content:"";
-        position:absolute;
-        right:0;
-        top:50%;
-        transform:translateY(-50%);
-        width:1px;
-        height:18px;
-        background:rgba(255,255,255,0.7);
-    }
+.cdresourceStrip {
+            background-color: #fa2222; 
+            padding: 30px 0;
+        }
+
+        /* Flex container to wrap the buttons nicely */
+        .top-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center them, or use 'start' for left align */
+            gap: 15px; /* Space between buttons */
+        }
+
+        /* The Button Style (Matching your Image) */
+        .top-menu a {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--white);
+            color: #2c3e50; /* Dark blue/grey text */
+            text-decoration: none;
+            font-family: var(--blod-arial);
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border-radius: 50px; /* Makes it a pill shape */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Subtle shadow */
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+
+        /* Icon Styling */
+        .top-menu a i {
+            margin-right: 10px;
+            color: var(--dark); /* Bootstrap Primary Blue (matches image icon) */
+            font-size: 1.1rem;
+        }
+
+        /* Hover Effect */
+        .top-menu a:hover i {color: var(--primary);}
+        .top-menu a:hover {
+            transform: translateY(-2px); /* Slight lift */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            color: var(--primary); /* Text turns blue on hover */
+            border-color: #e9ecef;
+        }
+        
+        /* Active/Click Effect */
+        .top-menu a:active {
+            transform: translateY(0);
+        }
+        
 
 /* -- inner list -- */
 .cdlistinner {padding: 4rem 0;}
@@ -1195,7 +1214,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             padding: 20px 25px;
             border-radius: 20px;
             color: #fff;
-            width: 260px;
+            /* width: 260px; */
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
@@ -1314,8 +1333,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             height: 100%;
             object-fit: cover;
             object-position: center;
-            min-width: 118%;
-            transform: scale(1.5);
+            /* min-width: 100%; */
+            /* transform: scale(1.5); */
         }
         .text-padding {
             max-width: 635px;
@@ -2312,8 +2331,8 @@ padding: 24px 16px;
     .cd-restoration .innerbox .cd-content {width: 100%;}
     .slider-container .slide {height: 400px;justify-content: center;padding: 20px;}
     .slider-container .overlay-box {text-align: center;}
-    .hero-search .search-bar { display: block; }
-    .hero-search .search-bar input { width: 100%; margin-bottom: 1rem; }
+    .herotwobox .search-bar { display: block; }
+    .herotwobox .search-bar input { width: 100%; margin-bottom: 1rem; }
     .hero-search .hero-title { margin-bottom: 5px; } 
     .card-wrapper { flex-direction: column; }
     .card-accent { width: 100%; min-height: 6px; background: linear-gradient(90deg, #00d2ff, #3a7bd5, #7b2ff7); }
