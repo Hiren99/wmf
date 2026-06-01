@@ -1288,6 +1288,84 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cdarticlepage .articleDesc h3 {font-size: clamp(1.25rem, 2vw, 1.5rem)}
 .cdarticlepage .articleDesc :where(h2,h3,h4,h5,h6) {color: var(--primary);font-family: var(--blod-arial);}
 .cdarticlepage .articleDesc p {color: var(--dark);text-align: justify;}
+/* show more link set */
+.cdmorelink {display: inline-block;color: #1a3a5c;font-family: var(--blod-arial);font-size: 14px;}
+.cdmorelink:hover {text-decoration: underline;transition: all 0.5s ease;}
+.short-content {
+    max-height: 500px;   /* Initial visible height */
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease;
+}
+/* Optional fade effect */
+.short-content::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(transparent, white);
+}
+
+.short-content.expanded {
+    max-height: 10000px;
+}
+
+.short-content.expanded::after {
+    display: none;
+}
+/* # show more link set */
+
+/* full with banner */
+.cdfullwidthbanner {background-color: #eff9fe;}
+.ht-whychoose .left-logo .cdiicrclogo {width: 200px;display: block;margin: 1rem auto 2rem;}
+.ht-whychoose .inner-list p {
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2px;
+}
+        .image-wrapper {
+            position: relative;
+            height: 100%;
+            min-height: 700px;
+            width: 100%;
+            overflow: hidden;
+            clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 46%, 0% 0%);
+            z-index: 1;
+        }
+        /* The actual IMG tag styling */
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            /* min-width: 100%; */
+            /* transform: scale(1.5); */
+        }
+        .text-padding {
+            max-width: 635px;
+            padding: 1rem 3rem;
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 991px) {
+            /* On Mobile/Tablet: Remove diagonal, stack vertically */
+            .image-wrapper {
+                clip-path: none; /* Remove the cut */
+                min-height: 300px;
+                margin-bottom: 30px;
+            }            
+            .image-wrapper img {
+                min-width: 100%; /* Reset width */
+            }
+            .text-padding {
+                padding: 20px 15px; /* Reset padding for mobile */
+            }
+        }
+/* full with banner # */
 
 .cdarticlepage {
     background-image: url('../images/service-bg.webp');
