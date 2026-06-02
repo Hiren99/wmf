@@ -219,25 +219,24 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
         /* Typography Styles */
         .cdcta .trust-label {
             color: #f36f21; /* Orange color from image */
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            font-size: 1.3rem;
+            font-family: var(--cgbold);
             letter-spacing: 0.5px;
             margin-bottom: 5px;
         }
 
         .cdcta .main-title {
+            font-family: var(--cgbold);
             color: #2c3e50;
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: clamp(1.5rem, 2vw, 2rem);
             margin-bottom: 5px;
             line-height: 1.2;
         }
 
         .cdcta .sub-title {
+            font-family: var(--cgbold);
             color: #555;
             font-size: 1.2rem;
-            font-family: var(--blod-arial);
             margin-bottom: 10px;
         }
 
@@ -614,10 +613,9 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .hero-section {
     position: relative;
     min-height: 500px;
-    background-image: linear-gradient(135deg, rgb(220 230 245 / 62%), rgb(200 215 235 / 62%)), url(../images/fort-lauderdale-city.jpg);
+    background-image: linear-gradient(135deg, rgb(220 230 245 / 62%), rgb(200 215 235 / 62%)), url(../images/fort-lauderdale-city.webp);
     background-size: cover;
-    background-position: top;
-    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -750,6 +748,9 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 
 /* --- CTA location box --- */
 .location-card {
+    max-width: 1126px;
+    width: 100%;
+    position: absolute;
     background: rgb(255 255 255 / 90%);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
@@ -769,15 +770,6 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
             margin-bottom: 5px;
             display: block;
         }
-
-        .city-name {
-            color: var(--dark);
-            font-size: clamp(1.5rem, 2vw, 1.8rem);
-            font-family: var(--blod-arial);
-            margin-bottom: 5px;
-            line-height: 1.2;
-        }
-
         .company-name {
             color: #555;
             font-size: 1rem;
@@ -1599,7 +1591,7 @@ ol li {margin-bottom: 12px;}
 .info-card:hover { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 .section-badge { display: inline-flex; align-items: center; gap: 8px; background: #f1f5f9; color: #475569; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
 .section-badge i { color: #10b981; }
-.main-title {color: var(--dark);font-size: clamp(1.5rem, 2vw, 1.8rem);font-family: var(--blod-arial);margin-bottom: 5px;line-height: 1.2;}
+.main-title {margin-bottom: 5px;line-height: 1.2;}
 .body-text { color: #475569; font-size: 1rem; line-height: 1.7; }
 .body-text a { color: #0ea5e9; text-decoration: none; font-weight: 600; }
 .body-text a:hover { text-decoration: underline; }
