@@ -824,6 +824,10 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     font-weight: 600;
     font-size: 0.9rem;
 }
+.cd-help-section {
+    padding: 7rem 0 4rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+}
 /* Left side */
 .cd-help-form-column {
     padding-right: 38px;
@@ -832,18 +836,16 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 
 .cd-help-accent {
     width: 80px;
-    height: 5px;
+    height: 6px;
     margin-bottom: 13px;
     border-radius: 10px;
-    background: #078e99;
+    background: #02b7e4;
 }
 
 .cd-help-title {
     margin: 0 0 21px;
     font-size: clamp(30px, 3.3vw, 40px);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
+    font-family: var(--blod-arial);
 }
 
 .cd-help-tabs {
@@ -868,22 +870,21 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 }
 
 .cd-help-tab span {
-    min-height: 47px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 12px;
+    padding: 12px 12px;
     border-radius: 30px;
-    color: #0d1932;
-    font-size: 16px;
-    font-weight: 700;
+    color: var(--dark);
+    font-size: clamp(18px,2vw,20px);
+    font-family: var(--blod-arial);
     text-align: center;
     transition: background .2s ease, color .2s ease;
 }
 
 .cd-help-tab input:checked+span {
-    background: #078f9a;
-    color: #fff;
+    background: #02b7e4;
+    color: var(--white);
 }
 
 .cd-help-tab input:focus-visible+span {
@@ -903,8 +904,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-help-label {
     display: block;
     margin-bottom: 5px;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-family: var(--blod-arial);
 }
 
 .cd-help-input {
@@ -937,16 +938,14 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 
 .cd-help-submit {
     width: 100%;
-    min-height: 48px;
     margin-top: 16px;
     padding: 10px 18px;
     border: 0;
     border-radius: 30px;
     background: #ff6814;
-    color: #fff;
-    font: inherit;
-    font-size: 19px;
-    font-weight: 700;
+    color:var(--white);
+    font-family: var(--blod-arial);
+    font-size: clamp(20px,2vw,18px);
     cursor: pointer;
     transition: background .2s ease;
 }
@@ -958,7 +957,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-help-note {
     margin: 9px 0 0;
     color: #202020;
-    font-size: 14px;
+    font-size: 1rem;
+    font-family: var(--normal-arial);
     text-align: center;
 }
 /* Right side */
@@ -970,9 +970,8 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
     display: grid;
     grid-template-columns: 58px minmax(0, 1fr) 22px;
     align-items: center;
-    gap: 18px;
-    min-height: 73px;
-    padding: 10px 0;
+    gap: 1rem;
+    padding: 12px 0;
     border-bottom: 1px solid #e4e4e4;
     color: inherit;
     text-decoration: none;
@@ -987,8 +986,6 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 }
 
 .cd-help-service-icon {
-    width: 48px;
-    height: 48px;
     display: grid;
     place-items: center;
     color: #078f9a;
@@ -1011,27 +1008,19 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 .cd-help-service-title {
     display: block;
     margin-bottom: 3px;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: clamp(20px,2vw,18px);
+    font-family: var(--blod-arial);
     transition: color .2s ease;
 }
 
 .cd-help-service-description {
     display: block;
-    color: #333;
-    font-size: 13px;
-    line-height: 1.4;
+    color: var(--dark);
+    font-size: 14px;
 }
 
 .cd-help-service-arrow {
-    width: 20px;
-    height: 20px;
-    fill: none;
-    stroke: #078f9a;
-    stroke-width: 2.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    color: #02b7e4;
 }
 /* ==== Resourc ==== */
 .hero-search { background: url('https://watermoldfire.net/images/fire-demage.jpg') center/cover no-repeat; padding: 3rem 0; position: relative; }
@@ -2655,6 +2644,7 @@ padding: 24px 16px;
     .features-wrapper { grid-template-columns: repeat(2, 1fr); width: 100%; }
 
     .location-card {
+        position: unset;
     text-align: center;
     padding: 30px 20px;
     }
@@ -2675,6 +2665,7 @@ padding: 24px 16px;
         border-right: 0;
         border-bottom: 1px solid #d8d8d8;
     }
+    .cd-help-section {padding: 2rem 0;}
 }
 @media (938px <= width <= 1030px) {
 }
