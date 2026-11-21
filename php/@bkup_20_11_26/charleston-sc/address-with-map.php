@@ -1,0 +1,21 @@
+    <section class="cdcitymap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12">
+                    <div class="cd-sectiontitle text-center mb-4">
+                        <h2 class="titleh2">Servicing all of Broward County and Surrounding South Carolina</h2>                    
+                    </div>
+                </div>
+                <!-- G map -->
+                <div class="col-xl-12 col-md-12 col-lg-12">
+                    <div class="gmap">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.103803228066!2d-79.87413699999999!3d32.9218556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88fe6ed89c1df033%3A0xdf0463d6a30e87ec!2s1757%20Clements%20Ferry%20Rd%2C%20Charleston%2C%20SC%2029492%2C%20USA!5e0!3m2!1sen!2sin!4v1794108198091!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php
+    echo testmonial_what_our_clients_say();
+    ?>
