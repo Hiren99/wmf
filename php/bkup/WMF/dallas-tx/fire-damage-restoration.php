@@ -125,7 +125,7 @@ require_once __DIR__ . '/../includes/header.php';
 ?>
 
     <!-- ===== HERO ===== -->
-    <section class="hero-section">
+    <section class="hero-section cddallas-tx">
         <div class="hero-content">
             <!-- Main Heading -->
             <h1 class="hero-title">

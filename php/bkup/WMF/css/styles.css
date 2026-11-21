@@ -684,7 +684,7 @@ button {outline: none;transition: all 0.3s ease;border: 0;}
 }
 
 .hero-title {
-    font-size: clamp(1.8rem, 3vw, 3rem);
+    font-size: clamp(1.5rem, 3vw, 3rem);
     font-family: var(--blod-arial);
     color: #1a3a5c;
     line-height: 1.15;
