@@ -3014,7 +3014,7 @@ padding: 24px 16px;
     padding: 8px 10px;
     font-size: 12px;
   }
-  .hero-section {padding-top: 1rem;}
+  .hero-section {padding-top: 1rem;min-height: auto;}
 }
 @media (width <= 480px) {
     .slider-container .slide { height: 350px; }
